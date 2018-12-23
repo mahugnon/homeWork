@@ -11,7 +11,7 @@ Class {
 		'elements',
 		'selected'
 	],
-	#category : #homeWork
+	#category : #'homeWork-version1'
 }
 
 { #category : #drawing }

@@ -1,7 +1,7 @@
 Class {
 	#name : #HWDrawerSubclassesWithForceLayout,
 	#superclass : #HWRoassalDrawer,
-	#category : #homeWork
+	#category : #'homeWork-version1'
 }
 
 { #category : #drawing }

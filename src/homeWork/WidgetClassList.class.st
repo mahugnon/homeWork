@@ -1,3 +1,6 @@
+"
+I contain the list of elements and the filter
+"
 Class {
 	#name : #WidgetClassList,
 	#superclass : #ComposablePresenter,
@@ -5,7 +8,7 @@ Class {
 		'listClass',
 		'filtre'
 	],
-	#category : #homeWork
+	#category : #'homeWork-version1'
 }
 
 { #category : #overrides }
@@ -13,13 +16,12 @@ WidgetClassList class >> defaultSpec [
 	| filtreHeight |
 	filtreHeight := StandardFonts defaultFont height + 15.
 	^ SpecLayout composed
-				
-				add: #listClass origin: 0 @ 0.2 corner: 1 @ 1;
-				add: #filtre
-					origin: 0 @ 0
-					corner: 1 @ 0
-					offsetOrigin: 0 @ 0
-					offsetCorner: 0 @ filtreHeight;
+		add: #listClass origin: 0 @ 0.05 corner: 1 @ 1;
+		add: #filtre
+			origin: 0 @ 0
+			corner: 1 @ 0
+			offsetOrigin: 0 @ 0
+			offsetCorner: 0 @ filtreHeight;
 		yourself
 ]
 
