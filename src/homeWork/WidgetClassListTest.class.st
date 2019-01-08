@@ -4,7 +4,7 @@ Class {
 	#category : #'homeWork-tests'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #'event testing' }
 WidgetClassListTest >> testFilter [
 	"Je permet de test filtre d'une liste "
 

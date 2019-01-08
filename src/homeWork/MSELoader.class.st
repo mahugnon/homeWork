@@ -16,7 +16,7 @@ super initialize .
 model:=MooseModel new.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #utilities }
 MSELoader >> loadMSE [
 	| fileRef |
 	fileRef := UIManager default

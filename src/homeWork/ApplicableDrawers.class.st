@@ -7,7 +7,7 @@ Class {
 	#category : #'homeWork-version2'
 }
 
-{ #category : #'as yet unclassified' }
+{ #category : #utility }
 ApplicableDrawers >> drawersFor: aType [
 	^ HWRoassalDrawer selectSubclasses: [ :drawerClass | drawerClass isApplicableOn: aType ]
 ]

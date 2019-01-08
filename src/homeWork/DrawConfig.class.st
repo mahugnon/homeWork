@@ -31,12 +31,12 @@ DrawConfig >> center: anObject [
 	center := anObject
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #utilities }
 DrawConfig >> drawers [
 applicableDrawers drawersFor: type.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #utilities }
 DrawConfig >> getDrawers [
 	^ApplicableDrawers
 		new

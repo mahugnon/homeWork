@@ -54,14 +54,6 @@ HWMainPresenter class >> drawSpec [
 		yourself
 ]
 
-{ #category : #'as yet unclassified' }
-HWMainPresenter class >> runMe [
-	<script>
-	(HWMainPresenter
-		withDrawer: HWDrawerSubclassesWithForceLayout
-		elements: Object withAllSubclasses) openWithSpec
-]
-
 { #category : #example }
 HWMainPresenter class >> runMeWithClass [
 	<script>
@@ -80,14 +72,6 @@ HWMainPresenter class >> runMeWithSelectors [
 	<script>
 	(HWMainPresenter withDrawer: HWDrawerMethodsImplementors elements: Object allSelectors)
 		openWithSpec
-]
-
-{ #category : #'as yet unclassified' }
-HWMainPresenter class >> withDrawer: aDrawerClass [
-	^self basicNew
-		withDrawer: aDrawerClass new;
-		initialize ;
-		yourself
 ]
 
 { #category : #'instance creation' }
@@ -115,11 +99,6 @@ HWMainPresenter >> actionButtonOkClick [
 ]
 
 { #category : #accessing }
-HWMainPresenter >> classes [
-	^ classes
-]
-
-{ #category : #accessing }
 HWMainPresenter >> currentConfig [
 	^ self drawerOptions config
 ]
@@ -142,7 +121,7 @@ HWMainPresenter >> diagram: anObject [
 	diagram := anObject
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #utilities }
 HWMainPresenter >> drawOnViewWith: aDrawerInstance [
 	diagram := self instantiate: RoassalModel.
 	diagram
@@ -199,11 +178,6 @@ HWMainPresenter >> initializeWidgets [
 		add: menu;
 		add: eltsWidget;
 		add: diagram
-]
-
-{ #category : #api }
-HWMainPresenter >> listClass: aCollection [
-self classes listClass: aCollection  
 ]
 
 { #category : #initialization }
@@ -265,7 +239,7 @@ HWMainPresenter >> menu: anObject [
 	menu := anObject
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #utilities }
 HWMainPresenter >> runMeWithClass [
 	<script>
 	| col |
@@ -278,19 +252,19 @@ HWMainPresenter >> runMeWithClass [
 		openWithSpec
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #utilities }
 HWMainPresenter >> runMeWithSelectors [
 	<script>
 	(self withDrawer: HWDrawerMethodsImplementors elements: Object allSelectors)
 		openWithSpec
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #utilities }
 HWMainPresenter >> title [ 
 ^'Visualization'.
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #utilities }
 HWMainPresenter >> visualizationMenuItem [
 	"Serve to refactor adding an item to my context menu. Goal: avoid having brain method. Thus I reduce the LOC of initializeWidgets  "
 
@@ -311,7 +285,7 @@ HWMainPresenter >> visualizeOptionsOn: item [
 	self drawerOptions window modalRelativeTo: World
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #utilities }
 HWMainPresenter >> withDrawer: aDrawerClass [
 	^self basicNew
 		withDrawer: aDrawerClass new;
@@ -319,7 +293,7 @@ HWMainPresenter >> withDrawer: aDrawerClass [
 		yourself
 ]
 
-{ #category : #'as yet unclassified' }
+{ #category : #utilities }
 HWMainPresenter >> withDrawer: aDrawerClass elements: aCollection [
 	^ self basicNew
 		initialize;
