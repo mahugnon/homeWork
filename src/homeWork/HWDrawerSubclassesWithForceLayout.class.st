@@ -6,8 +6,7 @@ Class {
 
 { #category : #drawing }
 HWDrawerSubclassesWithForceLayout class >> isApplicableOn: aType [
-	^aType isClass
-
+	^ aType isClass & ((aType className = 'ClassScanReport') not)
 ]
 
 { #category : #drawing }

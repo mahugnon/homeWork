@@ -25,9 +25,7 @@ MSELoader >> loadMSE [
 		path: ''
 		preview: ''.
 	fileRef isNotNil
-		ifTrue: [ "ifFalse: (self error: 'select a mse file please')"
-			^ MooseModel new
-				importFromMSEStream:fileRef asFileReference readStream ]
+		ifTrue: [  ^ MooseModel new importFromMSEStream: fileRef asFileReference readStream ]
 ]
 
 { #category : #accessing }

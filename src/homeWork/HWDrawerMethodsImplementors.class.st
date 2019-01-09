@@ -9,7 +9,7 @@ Class {
 
 { #category : #drawing }
 HWDrawerMethodsImplementors class >> isApplicableOn: aType [
-^aType isSymbol 
+	^ aType isSymbol & ((aType className = 'ClassScanReport') not)
 ]
 
 { #category : #drawing }
