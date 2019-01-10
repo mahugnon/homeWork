@@ -2,31 +2,31 @@
 I specify the project dependencies and packages 
 "
 Class {
-	#name : #HWBaseline,
+	#name : #BaselineOfHomework,
 	#superclass : #BaselineOf,
-	#category : #'Homework-version2'
+	#category : #BaselineOfHomework
 }
 
 { #category : #baselines }
-HWBaseline >> baseline: spec [
+BaselineOfHomework >> baseline: spec [
 	"baselines"
 
 	<baseline>
 	spec
 		for: #common
-		do: [ spec preLoadDoIt: #'preload:package:'.
-			spec postLoadDoIt: #'postload:package:'.
+		do: [ spec preLoadDoIt: #preload:package:.
+			spec postLoadDoIt: #postload:package:.
 			"Dependencies"
 			self
 				baselineForRoassal2Spec: spec;
 				baselineForClassNamesAnalyzer: spec;
 				baselineForColors: spec.
 			"Packages"
-			spec package: 'homeWork' with: [ spec requires: #('Roassal2' 'ClassNamesAnalyzer' 'Colors') ] ]
+			spec package: 'Homework' with: [ spec requires: #('Roassal2' 'ClassNamesAnalyzer' 'Colors') ] ]
 ]
 
 { #category : #baselines }
-HWBaseline >> baselineForClassNamesAnalyzer: spec [
+BaselineOfHomework >> baselineForClassNamesAnalyzer: spec [
 	spec
 		project: 'ClassNamesAnalyzer'
 		with: [ spec
@@ -36,7 +36,7 @@ HWBaseline >> baselineForClassNamesAnalyzer: spec [
 ]
 
 { #category : #baselines }
-HWBaseline >> baselineForColors: spec [
+BaselineOfHomework >> baselineForColors: spec [
 	spec
 		project: 'Colors'
 		with: [ spec
@@ -46,7 +46,7 @@ HWBaseline >> baselineForColors: spec [
 ]
 
 { #category : #baselines }
-HWBaseline >> baselineForRoassal2Spec: spec [
+BaselineOfHomework >> baselineForRoassal2Spec: spec [
 	spec
 		project: 'Roassal2'
 		with: [ spec
@@ -57,12 +57,12 @@ HWBaseline >> baselineForRoassal2Spec: spec [
 ]
 
 { #category : #baselines }
-HWBaseline >> postload: loader package: packageSpec [
+BaselineOfHomework >> postload: loader package: packageSpec [
 
   Transcript crLog: 'Project loaded!'
 ]
 
 { #category : #baselines }
-HWBaseline >> preload: aloader package: packageSpec [
+BaselineOfHomework >> preload: aloader package: packageSpec [
 	Transcript crLog: 'The fetching is finish. wait until loading finish'
 ]
