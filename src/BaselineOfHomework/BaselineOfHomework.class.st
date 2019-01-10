@@ -22,7 +22,9 @@ BaselineOfHomework >> baseline: spec [
 				baselineForClassNamesAnalyzer: spec;
 				baselineForColors: spec.
 			"Packages"
-			spec package: 'Homework' with: [ spec requires: #('Roassal2' 'ClassNamesAnalyzer' 'Colors') ] ]
+			spec
+				package: 'Homework'
+				with: [ spec requires: #('Roassal2' 'ClassNamesAnalyzer' 'ColorsExtensions') ] ]
 ]
 
 { #category : #baselines }
@@ -37,12 +39,9 @@ BaselineOfHomework >> baselineForClassNamesAnalyzer: spec [
 
 { #category : #baselines }
 BaselineOfHomework >> baselineForColors: spec [
-	spec
-		project: 'Colors'
-		with: [ spec
-				className: #ConfigurationOfColors;
-				versionString: #'StephaneDucasse.8';
-				repository: 'http://smalltalkhub.com/mc/StephaneDucasse/Colors/main' ]
+	 spec
+    	baseline: 'ColorsExtensions'
+    	with: [ spec repository: 'github://pharo-contributions/ColorsExtensions:master/src' ]
 ]
 
 { #category : #baselines }
@@ -51,8 +50,8 @@ BaselineOfHomework >> baselineForRoassal2Spec: spec [
 		project: 'Roassal2'
 		with: [ spec
 				className: #ConfigurationOfRoassal2;
-				versionString: #'AlexandreBergel.16';
-				loads: #('Roassal2Spec-core');
+				versionString: #stable;
+				loads: #('NoGlamour');
 				repository: 'http://smalltalkhub.com/mc/ObjectProfile/Roassal2/main/' ]
 ]
 
