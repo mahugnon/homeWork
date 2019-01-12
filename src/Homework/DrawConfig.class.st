@@ -38,7 +38,7 @@ applicableDrawers drawersFor: type.
 
 { #category : #utilities }
 DrawConfig >> getDrawers [
-	^DrawerManager
+	^ApplicableDrawers
 		new
 		drawersFor: type
 ]
