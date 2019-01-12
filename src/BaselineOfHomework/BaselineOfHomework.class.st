@@ -19,7 +19,8 @@ BaselineOfHomework >> baseline: spec [
 			"Dependencies"
 			self
 				baselineForRoassal2Spec: spec;
-				baselineForClassNamesAnalyzer: spec.
+				baselineForClassNamesAnalyzer: spec;
+				baselineForColors: spec.
 			"Packages"
 			spec
 				package: 'Homework'
@@ -29,10 +30,18 @@ BaselineOfHomework >> baseline: spec [
 { #category : #baselines }
 BaselineOfHomework >> baselineForClassNamesAnalyzer: spec [
 	spec
-		baseline: 'ClassNamesAnalyzer'
-		with: [ spec repository: 'https://github.com/MoussaSak/BluePrintVisualization:master/repository']
-			
-		
+		project: 'ClassNamesAnalyzer'
+		with: [ spec
+				className: #ConfigurationOfClassNamesAnalyzer;
+				versionString: #'AbdelghaniAlidra.31';
+				repository: 'http://smalltalkhub.com/mc/Alidra/ClassNamesAnalyzer/main/' ]
+]
+
+{ #category : #baselines }
+BaselineOfHomework >> baselineForColors: spec [
+	 spec
+    	baseline: 'ColorsExtensions'
+    	with: [ spec repository: 'github://pharo-contributions/ColorsExtensions:master/src' ]
 ]
 
 { #category : #baselines }
